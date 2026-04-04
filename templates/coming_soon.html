@@ -85,8 +85,9 @@ body::before{
 
 /* ===== LOGO ===== */
 .logo{
-    width:180px;
-    margin-bottom:20px;
+    display: block;
+    width:200px;
+    margin: 10px auto;
     animation: logoFade 1.2s ease forwards;
 }
 
@@ -245,7 +246,8 @@ button:hover{
     }
 
     .logo{
-        width:120px;
+        width:150px;
+        margin: 5px auto;
     }
 
     .timer{
@@ -301,7 +303,7 @@ button:hover{
 
     <!-- TITLE -->
     <h1>COMING SOON</h1>
-    <div class="subtitle">Luxury is arriving soon</div>
+    <div class="subtitle">A new standard of luxury is coming</div>
 
     <!-- TIMER -->
     <div class="timer" id="timer"></div>
@@ -314,7 +316,7 @@ button:hover{
     <!-- FORM -->
     <form method="POST" class="input-group" id="notifyForm">
     <input type="email" name="email" placeholder="Enter your email" required>
-    <button type="submit">Notify</button>
+    <button type="submit">Notify Me</button>
 </form>
 
 <div id="msg"></div>
@@ -327,7 +329,7 @@ button:hover{
     <!-- ABOUT -->
     <div class="about">
         <h3>About the Brand</h3>
-        BeltPurse.com is a trusted name in belts and purses since 1992, offering stylish and durable products in wholesale and retail.
+        BeltPurse.com is a trusted name in belts and purses since 1992, known for quality, style, and durability.
     </div>
 
 </div>
@@ -358,7 +360,7 @@ function updateTimer(){
     const m = Math.floor((gap/(1000*60))%60);
 
     document.getElementById("timer").innerHTML =
-        `${d} Days : ${h} Hours : ${m} Min`;
+        `${d} Days : ${h} Hours : ${m} Minute`;
 
     if(gap < 0){
         document.getElementById("timer").innerHTML = "LIVE NOW";
